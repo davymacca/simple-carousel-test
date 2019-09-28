@@ -1,0 +1,61 @@
+# Useful .gitignore templates: https://github.com/github/gitignore
+
+#################
+# OSX.gitignore #
+#################
+.DS_Store
+
+# Thumbnails
+._*
+
+# Files that might appear on external disk
+.Spotlight-V100
+.Trashes
+
+#####################
+# Windows.gitignore #
+#####################
+
+# Windows image file caches
+Thumbs.db
+
+# Folder config file
+Desktop.ini
+
+#################
+# vim.gitignore #
+#################
+
+.*.sw[a-z]
+*.un~
+Session.vim
+
+####################
+# Python.gitignore #
+# (part)
+####################
+
+*.py[co]
+
+# Installer logs
+pip-log.txt
+
+
+
+
+#########################
+# sublimetext.gitignore #
+#########################
+
+*.sublime-project
+*.sublime-workspace
+
+
+
+
+#########################
+# Project Specific #
+#########################
+.cache
+dist
+node_modules
