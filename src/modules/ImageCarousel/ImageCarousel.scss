@@ -1,0 +1,113 @@
+
+.image-carousel {
+    margin: 0 auto;
+    overflow: hidden;
+}
+  
+.image-carousel-list {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    display: flex;
+    left: -100%;
+    transform: translateX(100%);
+    list-style: none;
+} 
+@media (min-width: 480px) {
+    .image-carousel-list {
+        left: -50%;
+        transform: translateX(50%);
+    }
+}
+@media (min-width: 670px) {
+    .image-carousel-list {
+        left: -33.33333%;
+        transform: translateX(33.33333%);
+    }
+}
+
+.image-carousel-list.is-reversing {
+    transform: translateX(-100%);
+} 
+@media (min-width: 480px) {
+    .image-carousel-list.is-reversing {
+        transform: translateX(-50%);
+    }
+}  
+@media (min-width: 670px) {
+    .image-carousel-list.is-reversing {
+        transform: translateX(-33.33333%);
+    }
+}
+  
+.image-carousel-list.is-set {
+    transform: none;
+    transition: transform 0.5s ease-in-out;
+}
+  
+.image-carousel-item {
+    flex: 1 0 100%;
+    order: 2;
+    position: relative;
+    background: #ddd;
+
+    h2 {
+        margin: 0;
+        padding: 65px 0;
+        color: #aaa;
+        font-weight: normal;
+        font-size: 100px;
+        text-align: center;
+    }
+} 
+.image-carousel-item:nth-child(even) {
+    background: #d5d5d5;
+} 
+@media (min-width: 480px) {
+    .image-carousel-item {
+        flex-basis: 50%;
+    }
+}
+@media (min-width: 670px) {
+    .image-carousel-item {
+        flex-basis: 33.33333%;
+    }
+}
+
+.image-carousel-item.is-ref {
+    order: 1;
+}
+ 
+.image-carousel-item-title {
+    margin: 0;
+    width: 100%;
+    position: absolute;
+    bottom: 20px;
+    color: #6f6f6f;
+    text-align: center;
+    text-shadow: 0px 1px 1px #fff;
+}
+
+
+  
+ 
+// Nav Controls
+.controls {
+    padding: 20px;
+    text-align: center;
+}
+  
+.controls button {
+    padding: 10px 20px;
+    border: 0;
+    border-radius: 0.25em;
+    background: #aaa;
+    color: #eee;
+    
+
+    &:hover,
+    &:focus {
+        background: #93CFEF;
+        color: #1a1a1a;
+    }
+}
