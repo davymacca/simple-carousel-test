@@ -1,10 +1,7 @@
 'use strict';
 
-// TODO: Split out later into SCSS _partials
-// import "normalize.css";
 import "./styles.scss";
 import "./modules/ImageCarousel/ImageCarousel.scss";
-
 import { ImageCarousel } from './modules/ImageCarousel/ImageCarousel';
 
 
@@ -12,7 +9,6 @@ import { ImageCarousel } from './modules/ImageCarousel/ImageCarousel';
 // :::
 // ::: Entry point for app
 // :::
-
 
 
 
