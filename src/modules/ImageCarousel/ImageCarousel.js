@@ -159,10 +159,10 @@ export class ImageCarousel {
         
         // this._numberOfImages
         
-        // <div class="image-carousel">
+        // <div class="image-carousel" aria-live="polite">
         //     <ul class="image-carousel-list is-set">
         //         {{#each items}}
-        //         <li class="image-carousel-item">
+        //         <li class="image-carousel-item" aria-hidden="false">
         //             <img src="{{webformatURL}}" alt="A photo containing {{tags}}">
         //             <p class="image-carousel-item-title">{{tags}}</p>
         //         </li>
@@ -252,7 +252,17 @@ export class ImageCarousel {
             nextItem = this._getNextItem(nextItem);
             nextItem.style.order = i;
         }
-    
+
+        // Change each aria-hidden attributes based on if they are in view or not.
+        // TODO: When looping through the items, work out which ones aren't currently 
+        // TODO: visible and change aria-hidden="false" or aria-hidden="true" if they are off screen 
+        // TODO: This should be each time the carousel is transitioned
+        // TODO: Also add coresponding css selectors so they are actually hidden
+        // TODO: li[aria-hidden='true'] { display: none; }
+        // TODO: li[aria-hidden='false'] { display: block; }
+
+
+        // Animate the carousel items 
         // TODO: Here is where I would use a small animation libirary to animate between items
         // TODO: Below works to show how the items will look when animated but use of setTimeout is not a recomeded method
 

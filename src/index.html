@@ -13,41 +13,44 @@
     
     <h1 class="title">Carousel Test</h1>
 
-    <div class="image-carousel">
+    <div class="image-carousel" aria-live="polite">
 
         <ul class="image-carousel-list is-set">
-            <li class="image-carousel-item">
+            <li class="image-carousel-item" aria-hidden="false">
                 <h2>1</h2>
                 <p class="image-carousel-item-title">Title 1</p>
             </li>
-            <li class="image-carousel-item">
+            <li class="image-carousel-item" aria-hidden="false">
                 <h2>2</h2>
                 <p class="image-carousel-item-title">Title 2</p>
             </li>
-            <li class="image-carousel-item">
+            <li class="image-carousel-item" aria-hidden="false">
                 <h2>3</h2>
                 <p class="image-carousel-item-title">Title 3</p>
             </li>
-            <li class="image-carousel-item">
+            <li class="image-carousel-item" aria-hidden="true">
                 <h2>4</h2>
                 <p class="image-carousel-item-title">Title 4</p>
             </li>
-            <li class="image-carousel-item">
+            <li class="image-carousel-item" aria-hidden="true">
                 <h2>5</h2>
                 <p class="image-carousel-item-title">Title 5</p>
             </li>
-            <li class="image-carousel-item is-ref">
+            <li class="image-carousel-item is-ref" aria-hidden="true">
                 <h2>6</h2>
                 <p class="image-carousel-item-title">Title 6</p>
             </li>
         </ul><!-- /image-carousel-list -->
 
     </div><!-- /image-carousel -->
-      
-    <div class="controls">
-        <button class="image-carousel-nav" data-direction="prev">Prev</button>
-        <button class="image-carousel-nav" data-direction="next">Next</button>
-    </div>
+    
+    <fieldset aria-label="carousel buttons" aria-controls="carousel">
+        <div class="controls">
+            <button class="image-carousel-nav" aria-label="previous" data-direction="prev">Prev</button>
+            <button class="image-carousel-nav" aria-label="next" data-direction="next">Next</button>
+        </div>
+    </fieldset>
+    
     
 
     <script type="text/javascript" src="./app.js"></script>
