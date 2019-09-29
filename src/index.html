@@ -2,18 +2,55 @@
 <html class="no-js" lang="">
 <head>
     <meta charset="utf-8">
-    <title>Simple Carousel</title>
+    <title>Simple Image Carousel - Test</title>
     <meta name="description" content="">
     <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="theme-color" content="#fafafa">
-    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
-    <link href="https://fonts.googleapis.com/css?family=Ropa+Sans&display=swap" rel="stylesheet" >
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin><!-- Warm up the dns for font file asset -->
+    <link href="https://fonts.googleapis.com/css?family=Ropa+Sans&display=swap" rel="stylesheet"><!-- Uses `font-display: swap` now by default :) -->
 </head>
 <body>
     
-    <h1>Hello!</h1>
+    <h1 class="title">Carousel Test</h1>
 
-    <script type='text/javascript' src='./app.js'></script>
+    <div class="image-carousel">
+
+        <ul class="image-carousel-list is-set">
+            <li class="image-carousel-item">
+                <h2>1</h2>
+                <p class="image-carousel-item-title">Title 1</p>
+            </li>
+            <li class="image-carousel-item">
+                <h2>2</h2>
+                <p class="image-carousel-item-title">Title 2</p>
+            </li>
+            <li class="image-carousel-item">
+                <h2>3</h2>
+                <p class="image-carousel-item-title">Title 3</p>
+            </li>
+            <li class="image-carousel-item">
+                <h2>4</h2>
+                <p class="image-carousel-item-title">Title 4</p>
+            </li>
+            <li class="image-carousel-item">
+                <h2>5</h2>
+                <p class="image-carousel-item-title">Title 5</p>
+            </li>
+            <li class="image-carousel-item is-ref">
+                <h2>6</h2>
+                <p class="image-carousel-item-title">Title 6</p>
+            </li>
+        </ul><!-- /image-carousel-list -->
+
+    </div><!-- /image-carousel -->
+      
+    <div class="controls">
+        <button class="image-carousel-nav" data-toggle="prev">Prev</button>
+        <button class="image-carousel-nav" data-toggle="next">Next</button>
+    </div>
+    
+
+    <script type="text/javascript" src="./app.js"></script>
 
 </body>
 </html>
