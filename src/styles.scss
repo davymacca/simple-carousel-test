@@ -1,21 +1,33 @@
 // Reset the box-sizing
-// http://www.paulirish.com/2012/box-sizing-border-box-ftw/ (and no, performance is not an issue)
+// http://www.paulirish.com/2012/box-sizing-border-box-ftw/ (performance is not an issue)
 *,
 *:before,
 *:after {
     box-sizing: border-box;
 }
 
+
+// Default reset styles 
 html {
     box-sizing: border-box;
 }
-
 body {
-    padding: 1rem;
+    margin: 0;
+    padding: 20px;
     color: #1a1a1a;
     background-color: #fff;
     font-family: 'Ropa Sans', sans-serif;
     font-feature-settings: "kern";
     text-rendering: optimizeLegibility;
 }
+
+
+/* Page */
+.title {
+    margin: 0 0 20px 0;
+    padding: 30px 20px;
+    background: #52a4d0;
+    color: #fff;
+}
+
 
