@@ -2,18 +2,19 @@
 
 This is a simple vanilla JS carousel used to display images. Self contained so it can be dropped into any project. 
 
-The layout is created using flexbox. By allowing flexbox to do the heavy lifting of responsive and adaptive design it leaves the JS to simply add a few classes here and there and control the order flexbox via `order:n`. 
+The layout is created using flexbox. By allowing flexbox to do the heavy lifting of responsive and adaptive design it leaves the JS to simply add a few classes here and there and control the order via flexbox `order:n`. 
 
-Slide transition effects are handled with preferment CSS transitions, transforming only translateX() properties.
+Slide transition effects are handled with performant CSS transitions, transforming only translateX() properties.
 
 
 
 
 ## Tech setup 
+- NPM
 - Yarn
 - ParceJS (Application bundler)
 - CSS (SASS)
-- JS (ES6 Transpile via babel)
+- JS (ES6 Transpiled via babel)
 - Docs (JSDoc style comments for autogen documentation)
 - Karma/Jasmine (for tests)
 - 3rd Party Dependancies 
@@ -42,7 +43,7 @@ To create a production build:
 ```sh
 yarn build-prod
 ```
-> Fully compressed CSS/JS/HTML 
+> Fully compressed and concatenated HTML/CSS/JS 
 
 To run unit tests
 
@@ -64,7 +65,7 @@ Instantiate the carousel
 
 import { ImageCarousel } from './ImageCarousel';
 
-const carousel = new ImageCarousel('.selector', {
+const carousel = new ImageCarousel('.image-carousel', {
     numberOfImages: 6, 
     searchTerms: 'cats'
 });
@@ -72,31 +73,31 @@ const carousel = new ImageCarousel('.selector', {
 
 ### Methods 
 
-Move the carousel along one
+Move the carousel to the next item
 ```js
 carousel.next();
 ```
 
-Move the carousel backwards one
+Move the carousel backwards one item
 ```js
 carousel.prev();
 ```
 
-Move the carousel to any slide index. Method takes a `Number`
+Move the carousel to any specific slide index. Method takes a `Number`
 ```js
 carousel.moveTo(4);
 ```
 
 ## Markup 
 
-This carousel requires the following markup.
+The carousel requires the following markup:
 
 ```html
 <ul class="image-carousel">
     <li><img src="my-default-image.jpg" alt="My Default Image"></li>
 </ul>
 ```
-> ImageCarousel will add the markup for the additional slides. The first slide can be a placeholder whilst waiting for the images to be returned from the API.
+> ImageCarousel will add the markup for the additional slides. The first slide can be left blank or used as placeholder whilst waiting for the images to be returned from the API.
 
 ### Config 
 
