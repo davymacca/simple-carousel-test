@@ -15,6 +15,7 @@ Slide transition effects are handled with preferment CSS transitions, transformi
 - CSS (SASS)
 - JS (ES6 Transpile via babel)
 - Docs (JSDoc style comments for autogen documentation)
+- Karma/Jasmine (for tests)
 - 3rd Party Dependancies 
     - normalise.css (helps with cross browser defaults)
     - hammerjs (swipe events)

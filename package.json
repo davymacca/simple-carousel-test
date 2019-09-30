@@ -12,6 +12,9 @@
   },
   "dependencies": {
     "hammerjs": "^2.0.8",
+    "jasmine": "^3.5.0",
+    "karma": "^4.3.0",
+    "karma-jasmine": "^2.0.1",
     "normalize.css": "^8.0.1"
   },
   "devDependencies": {
