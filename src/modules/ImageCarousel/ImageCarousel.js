@@ -10,7 +10,7 @@ const API = {
 
 
 /**
- * This createas an isntance of ImageCarousel.
+ * This creates an instance of ImageCarousel.
  * @class
  */
 export class ImageCarousel {
@@ -96,7 +96,7 @@ export class ImageCarousel {
     // :::
 
     /**
-     * Calls the API to retrive a list of images then creates a new object to work
+     * Calls the API to retrieve a list of images then creates a new object to work
      * @param {String} selector - A css selector
      * @param {Object} config - An object containing configuration items
      * @private
@@ -120,7 +120,7 @@ export class ImageCarousel {
         // TODO: add the new image url to the <img> elements src this._imageData.webformatURL
         // TODO: include data from this._imageData.tags for alt tags and titles
 
-        // NB: Ideally we won't be making a call clientside directly to a different domain
+        // NB: Ideally we won't be making a call client-side directly to a different domain
         // This could be proxied locally through a backend service so we could correctly configure CORS and reduce security risks
     }
 
@@ -138,7 +138,7 @@ export class ImageCarousel {
         // TODO: Perform checks on types 
         // TODO: Perform checks if no values are present for numberOfImages or searchTerms 
         // TODO: Throw an error 
-        // TODO: Set to internal acessible vars if successful 
+        // TODO: Set to internal accessible vars if successful 
 
         this._numberOfImages = config.numberOfImages || 6;
         this._searchTerms = config.searchTerms || 'cats';
@@ -187,12 +187,12 @@ export class ImageCarousel {
     /**
      * Takes the current carousel reference item from the list of carousel items. Returns the imediatly
      * follwoing item. If current reference is last item in the list then it returns the first.
-     * @param {HTMLElement} currentItemElement - The current refernce item element
+     * @param {HTMLElement} currentItemElement - The current reference item element
      * @return {HTMLElement} The next element in the carousel list
      * @private
      */
     _getNextItem (currentItemElement) {
-        // Get the imediatly following item
+        // Get the immediately following item
         let el = currentItemElement.nextElementSibling;
         if (el === null) {
             // at the end of the list so set it to the first 
@@ -203,9 +203,9 @@ export class ImageCarousel {
     }
 
     /**
-     * Takes the current carousel reference item from the list of carousel items. Returns the imediatly
+     * Takes the current carousel reference item from the list of carousel items. Returns the immediately
      * previous item. If the current reference is the first item then it returns the last.
-     * @param {HTMLElement} currentItemElement - The current refernce item element
+     * @param {HTMLElement} currentItemElement - The current reference item element
      * @return {HTMLElement} The previous element in the carousel list
      * @private
      */
@@ -257,14 +257,14 @@ export class ImageCarousel {
         // TODO: When looping through the items, work out which ones aren't currently 
         // TODO: visible and change aria-hidden="false" or aria-hidden="true" if they are off screen 
         // TODO: This should be each time the carousel is transitioned
-        // TODO: Also add coresponding css selectors so they are actually hidden
+        // TODO: Also add corresponding css selectors so they are actually hidden
         // TODO: li[aria-hidden='true'] { display: none; }
         // TODO: li[aria-hidden='false'] { display: block; }
 
 
         // Animate the carousel items 
-        // TODO: Here is where I would use a small animation libirary to animate between items
-        // TODO: Below works to show how the items will look when animated but use of setTimeout is not a recomeded method
+        // TODO: Here is where I would use a small animation library to animate between items
+        // TODO: Below works to show how the items will look when animated but use of setTimeout is not a recommended method
 
         // We need to remove the class so that the css animation gets chance to work (HACK!)
         this._carouselList[0].classList.remove('is-set');
