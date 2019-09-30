@@ -5,7 +5,7 @@
 const API = {
     'host': 'https://pixabay.com/api/',
     'endpoint': '?key=9656065-a4094594c34f9ac14c7fc4c39&q=',
-}
+};
 
 
 
@@ -107,7 +107,7 @@ export class ImageCarousel {
         let url = API.host + API.endpoint + this._searchTerms + '&per_page=' + this._numberOfImages;
         
         try {
-            const response = await fetch(url)
+            const response = await fetch(url);
             const images = await response.json();
             this._imageData = images.hits;
         } catch (error) {
